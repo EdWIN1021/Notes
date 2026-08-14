@@ -109,7 +109,11 @@
     "descriptor": 97,
     "shadow": 98,
     "memory-management": 99,
-    "smart-pointer": 100
+    "smart-pointer": 100,
+    "zion": 101,
+    "knowledge-management": 102,
+    "information-architecture": 103,
+    "obsidian": 104
   },
   "_version": 3
 }
