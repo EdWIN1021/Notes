@@ -421,5 +421,5 @@ float3 pixelToLightDisp = lightPos - input.v_worldPos; // 都在 World Space
 
 ## 相关概念
 
-- [[03 - D3D11/D3D11.ConstantBuffer]] — Light/Camera/Model 等数据如何传进 Shader
+- [[03 - D3D11/Resources/D3D11.ConstantBuffer]] — Light/Camera/Model 等数据如何传进 Shader
 - [[Render-Target]] — Pixel Shader 输出最终写入哪里

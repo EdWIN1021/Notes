@@ -155,7 +155,7 @@ Vec3 displacement; // 有方向，也有距离
 
 ## 相关链接
 
-- [[04 - Math/MP.MathUtils.DotProduct]]
-- [[04 - Math/MP.MathUtils.CrossProduct]]
-- [[04 - Math/Collision.Z-Aligned-Capsule-Overlap]]
+- [[04 - Math/Vectors/MP.MathUtils.DotProduct]]
+- [[04 - Math/Vectors/MP.MathUtils.CrossProduct]]
+- [[04 - Math/Collision/Collision.Z-Aligned-Capsule-Overlap]]
 

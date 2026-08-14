@@ -1,5 +1,8 @@
 # Zion Vault Reorganization Implementation Plan
 
+> [!warning] Superseded
+> This plan is not active. The approved scope was reduced to moving loose notes into appropriate folders, preserving filenames and content wherever possible.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Reorganize every Zion Vault note into the approved domain hierarchy while preserving content, attachments, old-name discoverability, and all resolvable Obsidian links.

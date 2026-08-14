@@ -14,7 +14,7 @@ created: 2026-05-25
 
 ## [2026-06-28] query+archive | Z-Aligned Capsule Overlap
 
-- 归档 collision 学习笔记：[[04 - Math/Collision.Z-Aligned-Capsule-Overlap]]
+- 归档 collision 学习笔记：[[04 - Math/Collision/Collision.Z-Aligned-Capsule-Overlap]]
 - 主题：Unreal-style capsule half height、bone start/end、Z-aligned capsule overlap、kissing 不算 overlap。
 
 ---
@@ -80,10 +80,10 @@ created: 2026-05-25
 ## [2026-05-26] query+archive | D3D11 Shader Pipeline 基础
 
 对话式学习，归档进已有的 `03 - D3D11/` 体系：
-- **丰富** [[03 - D3D11/D3D11.InputLayout]] — `D3D11_INPUT_ELEMENT_DESC` 详解、`APPEND_ALIGNED_ELEMENT`、Semantic 对接机制
-- **丰富** [[03 - D3D11/D3D11.ConstantBuffer]] — `register(bN)` 槽、内存布局匹配、16字节对齐规则
-- **丰富** [[03 - D3D11/D3D11.Texture]] — SamplerState、Filter 类型、AddressMode、与 RT 的关系
-- **新建** [[03 - D3D11/D3D11.HLSL-FX-Structure]] — FX 文件结构、数据流全景、UV 翻转原因
+- **丰富** [[03 - D3D11/Pipeline/D3D11.InputLayout]] — `D3D11_INPUT_ELEMENT_DESC` 详解、`APPEND_ALIGNED_ELEMENT`、Semantic 对接机制
+- **丰富** [[03 - D3D11/Resources/D3D11.ConstantBuffer]] — `register(bN)` 槽、内存布局匹配、16字节对齐规则
+- **丰富** [[03 - D3D11/Resources/D3D11.Texture]] — SamplerState、Filter 类型、AddressMode、与 RT 的关系
+- **新建** [[03 - D3D11/Shaders/D3D11.HLSL-FX-Structure]] — FX 文件结构、数据流全景、UV 翻转原因
 
 <!-- 新条目追加在此分隔线下方 ↓ -->
 
@@ -96,7 +96,7 @@ created: 2026-05-25
 ## [2026-07-04] query+archive | Position / Velocity / Speed / Displacement
 
 - 归档阅读 [[raw/books/Game Physics Engine Development.pdf]] 时整理出的 movement / physics integration 基础。
-- 新增 [[04 - Math/Physics.Position-Velocity-Speed-Displacement]]。
+- 新增 [[04 - Math/Physics/Physics.Position-Velocity-Speed-Displacement]]。
 - 核心三行：`velocity = direction * speed`、`displacement = velocity * deltaSeconds`、`newPosition = oldPosition + displacement`。
 - 更新 [[index]]。
 
@@ -109,26 +109,26 @@ created: 2026-05-25
 ## [2026-07-23] query+archive | D3D11 Depth Buffer / Depth Stencil Texture
 
 - 整理代码片段中 `D3D11_TEXTURE2D_DESC` 创建 depth-stencil texture 的含义。
-- 丰富 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT`、`D3D11_BIND_DEPTH_STENCIL`、Texture 与 DepthStencilView 的关系、`OMSetRenderTargets` 绑定流程和常见坑。
+- 丰富 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT`、`D3D11_BIND_DEPTH_STENCIL`、Texture 与 DepthStencilView 的关系、`OMSetRenderTargets` 绑定流程和常见坑。
 - 更新 [[index]]。
 
 ## [2026-07-23] refine | D3D11 descriptor 清零
 
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `D3D11_TEXTURE2D_DESC depthTextureDesc = {};` 为什么要先清零。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：补充 `D3D11_TEXTURE2D_DESC depthTextureDesc = {};` 为什么要先清零。
 - 重点：避免未显式填写的 `CPUAccessFlags`、`MiscFlags`、`SampleDesc.Quality` 等字段保留随机垃圾值，导致 `CreateTexture2D` 参数组合异常。
 
 ## [2026-07-23] refine | D3D11 DepthBuffer 字段解释格式
 
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：将 `D3D11_TEXTURE2D_DESC` 字段解释从表格改为带注释的 C++ code block，方便直接对照代码阅读。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：将 `D3D11_TEXTURE2D_DESC` 字段解释从表格改为带注释的 C++ code block，方便直接对照代码阅读。
 
 ## [2026-07-23] refine | D3D11 code block 单行调用格式
 
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：将 code block 中的多行函数调用改为单行调用，例如 `CreateDepthStencilView(...)`、`OMSetRenderTargets(...)`、`ClearDepthStencilView(...)`。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：将 code block 中的多行函数调用改为单行调用，例如 `CreateDepthStencilView(...)`、`OMSetRenderTargets(...)`、`ClearDepthStencilView(...)`。
 - 记录偏好：整理代码笔记时，函数调用参数不要拆成多行，优先写在一行里方便快速阅读。
 
 ## [2026-07-23] refine | D24_UNORM_S8_UINT 像素布局
 
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT` 的每像素布局：32 bits / 4 bytes，其中 24-bit UNORM 用于 depth test，8-bit UINT 用于 stencil test。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT` 的每像素布局：32 bits / 4 bytes，其中 24-bit UNORM 用于 depth test，8-bit UINT 用于 stencil test。
 - 补充 depth 与 stencil 的使用时机：depth 解决前后遮挡，stencil 作为整数 mask 控制绘制区域。
 
 ## [2026-07-23] refine | R16G16B16A16_FLOAT 与 HDR
@@ -138,61 +138,61 @@ created: 2026-05-25
 
 ## [2026-07-23] refine | Code comment language preference
 
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]] 和 [[rendering/Render-Target]]：将 code block 里的 `//` 注释统一改为英文。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]] 和 [[rendering/Render-Target]]：将 code block 里的 `//` 注释统一改为英文。
 - 记录偏好：以后代码块中的 comment 使用英文；正文解释可以继续使用中文。
 
 ## [2026-07-23] query+archive | D3D11_TEXTURE2D_DESC
 
-- 新增 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：单独整理 `D3D11_TEXTURE2D_DESC` 的作用、清零原因、字段解释、`MipLevels`、`Format`、`BindFlags`、depth buffer 示例和 render target 示例。
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：把通用 descriptor 说明链接到新笔记。
+- 新增 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：单独整理 `D3D11_TEXTURE2D_DESC` 的作用、清零原因、字段解释、`MipLevels`、`Format`、`BindFlags`、depth buffer 示例和 render target 示例。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：把通用 descriptor 说明链接到新笔记。
 - 更新 [[index]]。
 
 ## [2026-07-23] refine | D3D11 SampleDesc / MSAA
 
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `SampleDesc` 小节，解释 `SampleDesc.Count`、`SampleDesc.Quality`、MSAA、quality level 查询和 render target / depth buffer sample count 匹配规则。
-- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `depthTextureDesc.SampleDesc.Quality = 0;`。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `SampleDesc` 小节，解释 `SampleDesc.Count`、`SampleDesc.Quality`、MSAA、quality level 查询和 render target / depth buffer sample count 匹配规则。
+- 更新 [[03 - D3D11/Resources/D3D11.DepthBuffer]]：补充 `depthTextureDesc.SampleDesc.Quality = 0;`。
 
 ## [2026-07-23] refine | D3D11 Usage / CPUAccessFlags / MiscFlags
 
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `Usage`、`CPUAccessFlags`、`MiscFlags` 小节，并补强 `BindFlags` 的 RTV + SRV 后处理场景说明。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `Usage`、`CPUAccessFlags`、`MiscFlags` 小节，并补强 `BindFlags` 的 RTV + SRV 后处理场景说明。
 - 重点：`D3D11_USAGE_DEFAULT` 是 GPU 正常读写、CPU 不直接访问；`CPUAccessFlags = 0` 表示 CPU 不直接访问；`MiscFlags = 0` 表示无特殊资源行为。
 
 ## [2026-07-23] refine | D3D11 image texture mip generation
 
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：补充 `MipLevels = 0` 的特殊含义，以及 `D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV、RTV 配套生成 mipmap 的流程。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：补充 `MipLevels = 0` 的特殊含义，以及 `D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV、RTV 配套生成 mipmap 的流程。
 - 新增 image texture 示例：从 `Image` 创建可生成 mipmaps 的 shader texture。
 
 ## [2026-07-23] refine | D3D11 mip generation code block style
 
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：将 `MipLevels = 0`、`D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV/RTV 配套关系改写进带英文注释的 `cpp` code block。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：将 `MipLevels = 0`、`D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV/RTV 配套关系改写进带英文注释的 `cpp` code block。
 - 记录偏好：这类字段组合说明优先写在 code block 中，方便直接对照代码。
 
 ## [2026-07-23] refine | D3D11 UpdateSubresource texture upload
 
-- 更新 [[03 - D3D11/D3D11.Texture]]：新增 `上传图片数据到 Texture` 小节，解释 `rowPitch` 和 `UpdateSubresource(newTexture->m_texture, 0, nullptr, image.GetRawData(), rowPitch, 0)` 的参数对应关系。
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：从 image texture 示例链接到 texture upload 小节。
+- 更新 [[03 - D3D11/Resources/D3D11.Texture]]：新增 `上传图片数据到 Texture` 小节，解释 `rowPitch` 和 `UpdateSubresource(newTexture->m_texture, 0, nullptr, image.GetRawData(), rowPitch, 0)` 的参数对应关系。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：从 image texture 示例链接到 texture upload 小节。
 - 更新 [[index]]。
 
 ## [2026-07-23] refine | Bilingual parameter explanations
 
-- 更新 [[03 - D3D11/D3D11.Texture]]：将 `UpdateSubresource` 参数直观解释改为英文语义 + 中文说明的双语形式。
+- 更新 [[03 - D3D11/Resources/D3D11.Texture]]：将 `UpdateSubresource` 参数直观解释改为英文语义 + 中文说明的双语形式。
 - 记录偏好：API 参数解释块中，参数意义尽量同时给英文术语和中文解释。
 
 ## [2026-07-23] refine | Bilingual API prose
 
-- 更新 [[03 - D3D11/D3D11.Texture]]：将 `UpdateSubresource` 小节的关键说明句改为英文术语 + 中文解释的双语形式。
+- 更新 [[03 - D3D11/Resources/D3D11.Texture]]：将 `UpdateSubresource` 小节的关键说明句改为英文术语 + 中文解释的双语形式。
 - 记录偏好：API 说明正文中的关键句也尽量中英文并列，不只参数块双语。
 
 ## [2026-07-23] query+archive | Shadow Map typeless texture / DSV / SRV
 
 - 新增 [[rendering/Shadow-Map]]：整理 shadow map 的核心直觉、shadow pass / main pass、Texture resource / DSV / SRV 三者关系。
 - 重点：shadow map 底层 texture 使用 `DXGI_FORMAT_R24G8_TYPELESS`，写 depth 时 DSV 使用 `DXGI_FORMAT_D24_UNORM_S8_UINT`，shader 读取时 SRV 使用 `DXGI_FORMAT_R24_UNORM_X8_TYPELESS`。
-- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 Shadow Map 示例并链接到 rendering 笔记。
+- 更新 [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]：新增 Shadow Map 示例并链接到 rendering 笔记。
 - 更新 [[index]]。
 
 ## [2026-07-24] refine | SamplerMode::BILINEAR_WRAP
 
-- 更新 [[03 - D3D11/D3D11.Texture]]：补充 `SamplerMode::BILINEAR_WRAP` 的含义：bilinear filtering + wrap address mode。
+- 更新 [[03 - D3D11/Resources/D3D11.Texture]]：补充 `SamplerMode::BILINEAR_WRAP` 的含义：bilinear filtering + wrap address mode。
 - 更新 [[rendering/Shadow-Map]]：补充 shadow map 第一版更适合 `POINT_CLAMP`，不建议使用 `BILINEAR_WRAP`，避免 UV 越界采到另一侧 depth。
 
 ## [2026-07-25] canvas | Rendering pass pipeline
@@ -228,6 +228,35 @@ created: 2026-05-25
 
 ## [2026-08-13] refine | C++ std::unique_ptr
 
-- 更新 [[01 - C++/CPP.SmartPointers.Unique Pointers]]：补充唯一所有权直觉、`make_unique`、对象访问、move、函数参数与返回值、`get/reset/release`、容器、多态、数组和常见坑。
-- 补充与 [[01 - C++/CPP.SmartPointers.Smart Pointer]]、[[01 - C++/CPP.MoveConstructor]]、[[01 - C++/CPP.MoveAssignment]]、shared/weak pointer 页面的关联。
+- 更新 [[01 - C++/Smart Pointers/unique_ptr]]：补充唯一所有权直觉、`make_unique`、对象访问、move、函数参数与返回值、`get/reset/release`、容器、多态、数组和常见坑。
+- 补充与 [[01 - C++/Smart Pointers/Smart Pointer]]、[[01 - C++/Memory Management/CPP.MoveConstructor]]、[[01 - C++/Memory Management/CPP.MoveAssignment]]、shared/weak pointer 页面的关联。
+- 更新 [[index]]。
+
+## [2026-08-13] organize | C++ Smart Pointers
+
+- 新建 `01 - C++/Smart Pointers/` 分类目录。
+- 将 Smart Pointer 总览、`unique_ptr`、`shared_ptr`、`weak_ptr` 四页从 C++ 根目录移入该目录。
+- 文件名统一为 `Smart Pointer.md`、`unique_ptr.md`、`shared_ptr.md`、`weak_ptr.md`，并同步修复正文、[[index]] 与历史日志中的旧路径。
+
+## [2026-08-13] design | Zion Vault full reorganization
+
+- 新增 [[wiki/syntheses/zion-vault-reorganization-design]]：记录全库目录分类、命名规范、迁移边界、分批执行与验证标准。
+- 设计保留现有编号领域和英文技术命名风格，重点整理 C++、D3D11、Math 的扁平目录。
+- 当前仅完成设计文档，尚未开始批量移动笔记。
+- 更新 [[index]]。
+
+## [2026-08-13] plan | Zion Vault full reorganization
+
+- 新增 [[wiki/syntheses/zion-vault-reorganization-plan]]：将全库整理拆分为 baseline、manifest、八个迁移批次、索引重建与最终 lint。
+- 计划采用旧路径 → 新路径 manifest 作为唯一移动依据，每批验证通过后才进入下一批。
+- 当前仅完成执行计划，尚未开始批量移动笔记。
+- 更新 [[index]]。
+
+## [2026-08-13] organize | Loose notes into topic folders
+
+- 将整理范围简化为：只把散落文件放入对应文件夹，不重写正文，不执行 manifest、baseline 或模板化迁移。
+- 移动 271 个 Markdown 文件：C++ 188、D3D11 48、Math 32、Vault 根目录 3。
+- C++ 按语言基础、OOP、指针与引用、内存管理、STL 等主题归档；D3D11 按 Setup、Pipeline、Resources、Shaders、Drawing 归档；Math 按 Vectors、Shapes、Collision、Physics、Transforms、Utilities 归档。
+- 更新受影响的完整路径 Wiki links；文件 basename 保持不变，因此原有 bare Wiki links 继续有效。
+- 将先前的全库复杂设计与执行计划标记为已废止。
 - 更新 [[index]]。

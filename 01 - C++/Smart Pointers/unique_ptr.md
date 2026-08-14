@@ -8,6 +8,7 @@ tags:
 aliases:
   - std::unique_ptr
   - Unique Pointer
+  - CPP.SmartPointers.Unique Pointers
 ---
 
 # `std::unique_ptr`
@@ -97,7 +98,7 @@ player2 != nullptr; // true
 
 `std::move` 在这里表示：把“负责销毁 `Player` 的责任”从 `player1` 转交给 `player2`。底层 `Player` 对象通常不会因为这次转移而被复制或移动。
 
-相关机制见 [[01 - C++/CPP.MoveConstructor|Move Constructor]] 和 [[01 - C++/CPP.MoveAssignment|Move Assignment]]。
+相关机制见 [[01 - C++/Memory Management/CPP.MoveConstructor|Move Constructor]] 和 [[01 - C++/Memory Management/CPP.MoveAssignment|Move Assignment]]。
 
 ## 函数参数如何设计
 
@@ -324,8 +325,8 @@ auto player2 = std::move(player1);
 
 相关页面：
 
-- [[01 - C++/CPP.SmartPointers.Smart Pointer|Smart Pointer]]
-- [[01 - C++/CPP.SmartPointers.Shared Pointers|Shared Pointer]]
-- [[01 - C++/CPP.SmartPointers.Weak Pointers|Weak Pointer]]
-- [[01 - C++/CPP.MoveConstructor|Move Constructor]]
-- [[01 - C++/CPP.MoveAssignment|Move Assignment]]
+- [[01 - C++/Smart Pointers/Smart Pointer|Smart Pointer]]
+- [[01 - C++/Smart Pointers/shared_ptr|Shared Pointer]]
+- [[01 - C++/Smart Pointers/weak_ptr|Weak Pointer]]
+- [[01 - C++/Memory Management/CPP.MoveConstructor|Move Constructor]]
+- [[01 - C++/Memory Management/CPP.MoveAssignment|Move Assignment]]

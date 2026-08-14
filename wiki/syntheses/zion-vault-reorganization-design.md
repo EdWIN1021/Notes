@@ -1,5 +1,6 @@
 ---
 type: synthesis
+status: superseded
 created: 2026-08-13
 last_updated: 2026-08-13
 tags:
@@ -15,6 +16,9 @@ sources:
 ---
 
 # Zion Vault 全库整理设计
+
+> [!warning] 已废止
+> 用户将范围明确为“只把散落文件放入对应文件夹”。本文中的 manifest、baseline、批次迁移和全库模板化方案不再执行，仅保留为历史记录。
 
 ## 目标
 

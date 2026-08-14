@@ -1,6 +1,6 @@
 ---
 type: index
-last_updated: 2026-07-23
+last_updated: 2026-08-13
 ---
 
 # 📚 Wiki Index
@@ -65,6 +65,8 @@ _（暂无——会随着源摄取自动建立）_
 > 位于 `wiki/syntheses/`。跨源对比、深度回答、个人见解。
 
 - [[wiki/syntheses/knowledge-iteration-system-for-zion|Zion 知识迭代系统]] — 基于当前 Vault 结构定制的 LLM 维护流程、页面分层、日常命令与演进路线。
+- [[wiki/syntheses/zion-vault-reorganization-design|Zion Vault 全库整理设计（已废止）]] — 历史方案；实际采用简单的散落文件归档。
+- [[wiki/syntheses/zion-vault-reorganization-plan|Zion Vault 全库整理执行计划（已废止）]] — 历史方案，不再执行。
 
 ---
 
@@ -88,15 +90,14 @@ _（暂无——会随着源摄取自动建立）_
 - [[llm/7-Inference-Optimization|7. 推理优化]] — KV-Cache、量化、PagedAttention
 
 ### ⚙️ C++ / Game Dev
-- `01 - C++/` — C++ 学习笔记
-- [[01 - C++/CPP.SmartPointers.Unique Pointers|std::unique_ptr]] — 唯一所有权、`make_unique`、move、函数接口、容器、多态与常见资源管理错误。
+- `01 - C++/` — 按 Language Fundamentals、Classes & OOP、Pointers & References、Memory Management、STL 等主题归档。
+- [[01 - C++/Smart Pointers/unique_ptr|std::unique_ptr]] — 唯一所有权、`make_unique`、move、函数接口、容器、多态与常见资源管理错误。
 - `02 - UnrealEngine/` — UE 笔记
-- `03 - D3D11/` — D3D11 图形 API
-- `04 - Math/` — 图形数学
+- `03 - D3D11/` — 按 Setup & Device、Pipeline、Resources、Shaders、Drawing 归档。
+- `04 - Math/` — 按 Vectors、Shapes、Collision、Physics、Rotation & Transforms、Utilities 归档。
 
 ### 📋 其他
 - [[Cheatsheet]] — 备忘清单
-- [[Perforce]] — 版本控制
 
 ---
 
@@ -139,10 +140,10 @@ _（暂无——会随着源摄取自动建立）_
 ## Workflow Notes
 
 - [[wiki/syntheses/reading-learning-mode|阅读 + 学习模式]] — 面向游戏开发学习的阅读工作流：直觉、原理、实现、常见坑、检查问题与归档规则。
-- [[04 - Math/Physics.Position-Velocity-Speed-Displacement]] — Game physics movement 基础：`velocity = direction * speed`、`displacement = velocity * deltaSeconds`、`newPosition = oldPosition + displacement`。
+- [[04 - Math/Physics/Physics.Position-Velocity-Speed-Displacement]] — Game physics movement 基础：`velocity = direction * speed`、`displacement = velocity * deltaSeconds`、`newPosition = oldPosition + displacement`。
 - [[rendering/BuiltIn-Raw-Shader-And-Inline-Variable]] — engine 内置 raw shader source 的用法，以及 header 全局变量为什么要用 `inline`。
-- [[03 - D3D11/D3D11.DepthBuffer]] — D3D11 depth-stencil texture 创建流程：`CreateTexture2D`、`DXGI_FORMAT_D24_UNORM_S8_UINT`、`CreateDepthStencilView`、`OMSetRenderTargets`。
-- [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]] — D3D11 Texture2D descriptor 字段说明：尺寸、mipmap、format、bind flags、usage、MSAA 与常见创建模式。
-- [[03 - D3D11/D3D11.Texture#上传图片数据到 Texture]] — `UpdateSubresource` 上传 CPU image data 到 GPU texture：`rowPitch`、mip level 0、`GenerateMips`。
+- [[03 - D3D11/Resources/D3D11.DepthBuffer]] — D3D11 depth-stencil texture 创建流程：`CreateTexture2D`、`DXGI_FORMAT_D24_UNORM_S8_UINT`、`CreateDepthStencilView`、`OMSetRenderTargets`。
+- [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]] — D3D11 Texture2D descriptor 字段说明：尺寸、mipmap、format、bind flags、usage、MSAA 与常见创建模式。
+- [[03 - D3D11/Resources/D3D11.Texture#上传图片数据到 Texture]] — `UpdateSubresource` 上传 CPU image data 到 GPU texture：`rowPitch`、mip level 0、`GenerateMips`。
 - [[rendering/Shadow-Map]] — shadow map 的 D3D11 resource / DSV / SRV 关系：底层 `R24G8_TYPELESS`，写入 `D24_UNORM_S8_UINT`，读取 `R24_UNORM_X8_TYPELESS`。
 - [[rendering/Post-Processing-Pass]] — post-process pass 的判断标准：处理已有 texture 用 `DrawFullQuad()`，画真实 geometry 用 mesh draw。

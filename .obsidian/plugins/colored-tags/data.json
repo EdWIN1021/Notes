@@ -107,7 +107,9 @@
     "depth-buffer": 95,
     "stencil-buffer": 96,
     "descriptor": 97,
-    "shadow": 98
+    "shadow": 98,
+    "memory-management": 99,
+    "smart-pointer": 100
   },
   "_version": 3
 }

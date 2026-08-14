@@ -207,4 +207,4 @@ Draw calls already wrote the result into the bound render target / draw 的时�
 - [[rendering/Render-Target]]
 - [[rendering/Deferred-Rendering]]
 - [[rendering/Shadow-Map]]
-- [[03 - D3D11/D3D11.Texture]]
+- [[03 - D3D11/Resources/D3D11.Texture]]

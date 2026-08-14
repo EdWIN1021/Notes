@@ -245,7 +245,7 @@ CLAMP = clamp UV outside 0..1 to the edge / UV 越界时夹到边缘，不重复
 
 ## 相关链接
 
-- [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]
-- [[03 - D3D11/D3D11.DepthBuffer]]
-- [[03 - D3D11/D3D11.Texture]]
+- [[03 - D3D11/Resources/D3D11.D3D11_TEXTURE2D_DESC]]
+- [[03 - D3D11/Resources/D3D11.DepthBuffer]]
+- [[03 - D3D11/Resources/D3D11.Texture]]
 - [[rendering/Render-Target]]

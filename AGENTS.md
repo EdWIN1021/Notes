@@ -165,7 +165,7 @@ sources: []
 
 Wiki links：
 
-- 文件引用尽量用可点击 Wiki link：`[[03 - D3D11/D3D11.ConstantBuffer]]`。
+- 文件引用尽量用可点击 Wiki link：`[[03 - D3D11/Resources/D3D11.ConstantBuffer]]`。
 - 跨领域优先写完整路径，避免歧义。
 - 不确定目标是否存在时，先搜索再链接。
 
