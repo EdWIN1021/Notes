@@ -89,6 +89,7 @@ _（暂无——会随着源摄取自动建立）_
 
 ### ⚙️ C++ / Game Dev
 - `01 - C++/` — C++ 学习笔记
+- [[01 - C++/CPP.SmartPointers.Unique Pointers|std::unique_ptr]] — 唯一所有权、`make_unique`、move、函数接口、容器、多态与常见资源管理错误。
 - `02 - UnrealEngine/` — UE 笔记
 - `03 - D3D11/` — D3D11 图形 API
 - `04 - Math/` — 图形数学

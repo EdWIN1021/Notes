@@ -200,8 +200,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "77da44d77d7c4104",
+  "active": "8429eb866f7f4a91",
   "lastOpenFiles": [
+    "01 - C++/CPP.SmartPointers.Unique Pointers.md",
     "03 - D3D11/D3D11.Rasterizer.md",
     "03 - D3D11/D3D11.Initializing.md",
     "03 - D3D11/D3D11.ID3D11InputLayout.md",
@@ -227,7 +228,6 @@
     "01 - C++/CPP.Algorithm.max.md",
     "01 - C++/CPP.Algorithm.find.md",
     "01 - C++/CPP.char.isdigit.md",
-    "01 - C++/CPP.auto.md",
     "rendering/Rendering-Pass-Pipeline.canvas",
     "raw/books/Game Physics Engine Development.pdf",
     "raw/books",

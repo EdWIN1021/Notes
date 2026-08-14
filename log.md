@@ -225,3 +225,9 @@ created: 2026-05-25
 ## [2026-07-28] refine | Post-Processing-Pass structure
 
 - 更新 [[rendering/Post-Processing-Pass]]：移除单独的 `center-diagram` / `wide-note` cssclasses，统一为 rendering 笔记常用结构：直觉、基本 pass 链、`DrawFullQuad()`、使用场景、blur 拆分、Begin/End、常见坑、相关链接。
+
+## [2026-08-13] refine | C++ std::unique_ptr
+
+- 更新 [[01 - C++/CPP.SmartPointers.Unique Pointers]]：补充唯一所有权直觉、`make_unique`、对象访问、move、函数参数与返回值、`get/reset/release`、容器、多态、数组和常见坑。
+- 补充与 [[01 - C++/CPP.SmartPointers.Smart Pointer]]、[[01 - C++/CPP.MoveConstructor]]、[[01 - C++/CPP.MoveAssignment]]、shared/weak pointer 页面的关联。
+- 更新 [[index]]。
